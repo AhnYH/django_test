@@ -77,16 +77,16 @@ WSGI_APPLICATION = 'django_test.wsgi.application'
 
 database_id = '13.125.208.102'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'edxapp',
-        'USER': 'admin',
-        'PASSWORD': '0000',
-        'HOST': database_id,
-        'PORT': '3306',
-    }
-}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME': 'edxapp',
+#        'USER': 'admin',
+#        'PASSWORD': '0000#',
+#        'HOST': database_id,
+#        'PORT': '3306',
+#    }
+#}
 
 
 # Password validation
@@ -126,3 +126,4 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')

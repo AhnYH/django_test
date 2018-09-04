@@ -7,9 +7,6 @@ from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import login as dlogin
 from django.http import JsonResponse
 
-reload(sys)
-sys.setdefaultencoding('utf-8')
-
 
 @csrf_exempt
 def login(request):
