@@ -6,6 +6,7 @@ from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import login as dlogin
 from django.http import JsonResponse, HttpResponse
+from django.conf import settings
 
 
 @csrf_exempt
@@ -36,3 +37,14 @@ def req_test(request):
     response = HttpResponse(xml_data, content_type='text/xml')
     return response
 
+
+@csrf_exempt
+def req_detail(request, id=None):
+    read_xml = open(os.path.join(settings.BASE_DIR, 'cospace.xml'), 'r')
+    for r in read_xml:
+        if r.find(id) != -1:
+            res = HttpResponse(r, content_type='text/xml')
+            return res
+        else:
+            res = HttpResponse('<?xml version="1.0"?><failureDetails><coSpaceDoesNotExist /></failureDetails>', content_type='text/xml')
+    return res
