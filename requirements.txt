@@ -8,7 +8,7 @@ cryptography==2.3
 Django==2.0.5
 django-rest-swagger==2.2.0
 djangomako==1.1.1
-djangorestframework==3.8.2
+djangorestframework==3.11.2
 gunicorn==19.8.1
 idna==2.6
 itypes==1.1.0
