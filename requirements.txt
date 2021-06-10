@@ -5,7 +5,7 @@ chardet==3.0.4
 coreapi==2.3.3
 coreschema==0.0.4
 cryptography==2.3
-Django==2.0.5
+Django==2.2.24
 django-rest-swagger==2.2.0
 djangomako==1.1.1
 djangorestframework==3.8.2
